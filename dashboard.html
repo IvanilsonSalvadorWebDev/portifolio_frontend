@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <script type="module" src="dashboard.js" defer></script>
+  <style>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Google Sans", Arial, sans-serif;
+}
+
+/* Fundo branco com leve contraste */
+body {
+  background-color: #f6f8fa;
+  
+  height: 100vh;
+}
+h2{
+    margin: 4rem;
+    font-size: 4em;
+}
+.container{
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Container principal */
+.dashboard-container {
+  background-color: #ffffff;
+  width: 400px;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Título */
+.dashboard-container h1 {
+  color: #ff9800; /* Laranja Firebase */
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* E-mail do usuário */
+#userEmail {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Botão de sair */
+#logoutBtn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#logoutBtn:hover {
+  background-color: #f57c00; /* Tom mais escuro no hover */
+  transform: translateY(-2px);
+}
+
+/* Animação de entrada */
+.dashboard-container {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .dashboard-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <h2>Obrigado Deus por tudo na minha vida Deus! <br> Bem-vindo     <p id="userEmail"></p>
+    </h2>
+    <div class="container">
+    <div class="dashboard-container">
+        <h1>🎉 Bem-vindo ao Dashboard</h1>
+        <button id="logoutBtn">Sair</button>
+    </div>
+</div>
+  <script type="module" src="">
+    
+  </script>
+</body>
+</html>
