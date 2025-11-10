@@ -1,126 +1,97 @@
-*, *::before, *::after{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
---primary-light: white;
---primary-green: 120, 100%, 20%;
---secundary-green: 53%, 211%, 53%;
---terciary-green:56, 162, 56;
-
---sucess-hsl:120, 91%, 50%;
---error-hsl:0, 60%, 50%;
-
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a73e8, #00bfa5);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-body{
-    margin: 0;
+.full-screen-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.full-screen-container{
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    background-image: url("birmingham-museums-trust-8wcoY3wcbL0-unsplash.jpg");
-
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.login-container{
-    --color: hsl(var(--primary-green), .7);
-    background-color: var(--color);
-    box-shadow: 0 0 15px var(--color);
-    padding: 40px 30px;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 20px;
-    
+.login-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
-.login-title{
-    margin: 0;
-    color: white;
-    text-align: center;
-    font-size: 2em;
-    font-weight: normal;
+.form .input-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: white;
+label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
 }
 
-.input-group{
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+input {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
 }
 
-.input-group label{
-    color:white ;
-    font-weight: lighter;  
+.login-button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #1a73e8;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.input-group input{
-    font-size: 1.25rem;
-    padding: .5em;
-    border: none;
-    outline: none;
-    background-color:rgb(137, 155, 137) ;
-    border-radius: .25em;
-    color: white;
-    font-weight: lighter;
+.login-button:hover {
+  background-color: #1a73e8;
+  color: #fff;
 }
 
-.input-group.success input{
-    box-shadow: 0 0 0 2px hsl(var(--sucess-hsl)) ;
+.msg {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  color: #a0ffb4;
+  display: none;
 }
 
-.input-group.error input{
-    box-shadow: 0 0 0 2px var(--sucess-hsl) ;
+.input-group.success .msg {
+  display: block;
+  color: #00ff9d;
 }
 
-.input-group input:focus{
-    box-shadow: 0 0 0 2px rgb(53%, 211%, 53%) ;
-}
-
-.input-group .msg{
-/*display: none;*/
-font-size: .75em;
-
-}
-
-.input-group.success .msg, 
-.input-group.error .msg{
-display: block;
-}
-
-.input-group.error .msg{
-    color: hsl(var(--error-hsl)) ;
-}
-.input-group.success .msg{
-    color: hsl(var(--sucess-hsl));
-}
-
-.login-button{
-    padding: .5em 1em;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    background: rgb(87, 194, 87);
-    color: white;
-    border: 1px solid hsl(var(--terciary-green), .25);
-    border-radius: .25em;
-    cursor: pointer;
-}
-
-.login-button:hover,
-.login-button:focus{
-    background-color: hsl(var(--secundary-green), .4);
+.input-group.error .msg {
+  display: block;
+  color: #ff4f4f;
 }
